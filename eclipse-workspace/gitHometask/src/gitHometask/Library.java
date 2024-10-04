@@ -16,7 +16,14 @@ public class Library {
     }   
 
     public boolean searchBook(String bookName) {
-    	return books.contains(bookName);
-    	}
-}
+        return books.contains(bookName);
+    }
 
+    public void removeBook(String bookName) {
+        if (books.remove(bookName)) {
+            System.out.println(bookName + " removed from library.");
+        } else {
+            System.out.println(bookName + " not found in library.");
+        }
+    }
+}
